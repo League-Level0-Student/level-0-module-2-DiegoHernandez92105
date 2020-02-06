@@ -14,16 +14,21 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
-
+import java.util.Random;
 public class SafeCracker {
 
 	public static void main(String[] args) {
-		/*
-		 * Your mission: use the tryCode method to crack the safe by trying all possible
-		 * combinations
-		 */
-		
-
+		Random ran = new Random();
+		ran.nextInt();
+		int num = 0;
+		num = ran.nextInt((999999999 - 1)+1);
+		 //* Your mission: use the tryCode method to crack the safe by trying all possible
+		 //* combinations
+		 //*/
+		for (int i=0; i<99999999;i--) {
+		tryCode(num--);
+		tryCode(num++);
+		}
 	}
 
 	static void tryCode(int guess) {
